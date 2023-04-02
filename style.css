@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(76, 18, 130);
+  overflow-x: hidden;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+header {
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+#filters {
+  height: 20px;
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 1px solid rgba(156, 156, 156, 0.553);
+  border-right: 0;
+  background-color: #987c08;
+  color: white;
+  font-size: 10px;
+  border-color: #846b07;
+}
+
+#ricerca {
+  height: 20px;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border: 1px solid rgba(156, 156, 156, 0.553);
+  border-left: 0;
+  padding: 5px;
+  font-size: 10px;
+  border-color: #846b07;
+}
+
+.divisore {
+  padding-top: 80px;
+}
+
+h1 {
+  margin: 40px;
+  background-clip: inherit;
+  background: linear-gradient(200deg, #846b07 30%, #ff2b2b 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  pointer-events: none;
+}
+
+.usersList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  margin: 15px;
+}
+
+.userCard {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 350px;
+  border-radius: 20px;
+  background: linear-gradient(200deg, #846b07 30%, #ff2b2b 70%);
+  color: rgb(0, 229, 191);
+  transition: 0.8s;
+}
+
+.userCard:hover {
+  transform: scale(1.1);
+}
+
+.anagraphic {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.profPicContainer {
+  height: 170px;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profPicContainer img {
+  height: 70%;
+  width: 70%;
+  object-fit: contain;
+}
+
+.info {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.contName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 50%;
+  border-right: 1px solid black;
+}
+
+.contInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 10px;
+  width: 50%;
+}
+
+@media screen and (max-width: 350px) {
+  .userCard {
+    width: 230px;
+  }
+}
