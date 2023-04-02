@@ -58,7 +58,10 @@ function searchUsersName(event) {
   let value = event.target.value;
   GET("https://dummyjson.com/", "users?limit=100").then((data) => {
     data.users.map((user) => {
-      if (user.firstName.includes(value) || user.lastName.includes(value)) {
+      if (
+        user.firstName.toLowerCase().includes(value.toLowerCase()) ||
+        user.lastName.toLowerCase().includes(value.toLowerCase())
+      ) {
         usersList.appendChild(createUser(user));
       }
     });
